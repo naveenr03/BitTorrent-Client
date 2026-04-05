@@ -82,7 +82,9 @@ public class TorrentClient {
                 if (url.startsWith("http://") || url.startsWith("https://")) {
                     return TrackerRequestBuilder.build(url, infoHash, length);
                 }
+
             }
+
         }
         return TrackerRequestBuilder.build(meta.getAnnounce(), infoHash, length);
     }
